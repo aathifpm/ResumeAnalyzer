@@ -53,7 +53,7 @@ A sophisticated resume analysis tool that leverages AI to provide detailed insig
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/smart-resume-analyzer.git
+git clone https://github.com/aathifpm/ResumeAnalyzer.git
 cd smart-resume-analyzer
 ```
 
