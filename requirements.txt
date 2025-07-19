@@ -1,10 +1,13 @@
-blis==0.7.9
 flask==2.0.1
 python-docx==0.8.11
 PyMuPDF==1.19.1
-spacy==3.5.4
 flask-cors==3.0.10
 pytesseract==0.3.10
 Pillow==9.5.0
 gunicorn==21.2.0
-werkzeug==2.0.3 
+werkzeug==2.0.3
+
+# spaCy with specified version and dependencies
+spacy==3.2.0
+# Pre-built wheels instead of building from source
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.2.0/en_core_web_sm-3.2.0.tar.gz 

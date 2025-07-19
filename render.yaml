@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: resume-analyzer
+    runtime: python
+    buildCommand: ./build.sh
+    startCommand: gunicorn app:app
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+      - key: PYTHONUNBUFFERED
+        value: true 

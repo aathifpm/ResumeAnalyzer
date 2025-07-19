@@ -72,6 +72,24 @@ http://localhost:5000
 
 ## Deployment
 
+### Deploying to Render
+
+1. Create a Render account at [render.com](https://render.com)
+2. From your dashboard, click "New" and select "Web Service"
+3. Connect your GitHub repository containing this project
+4. Configure your web service with these settings:
+   - Name: resume-analyzer (or your preferred name)
+   - Environment: Python 3
+   - Build Command: `./build.sh` 
+   - Start Command: `gunicorn app:app`
+   - Select the appropriate instance type (even Free tier works)
+   - Add environment variables if needed
+   
+5. Click "Create Web Service"
+6. Once deployed, your app will be available at https://your-app-name.onrender.com
+
+**Note:** The first deployment may take longer as it needs to install all dependencies and build the required packages.
+
 ### Deploying to Heroku
 
 1. Create a Heroku account and install the Heroku CLI

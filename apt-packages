@@ -1,0 +1,5 @@
+build-essential
+python3-dev
+libxml2-dev
+libxslt-dev
+tesseract-ocr 
