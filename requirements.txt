@@ -6,8 +6,5 @@ pytesseract==0.3.10
 Pillow==9.5.0
 gunicorn==21.2.0
 werkzeug==2.0.3
-
-# spaCy with specified version and dependencies
-spacy==3.2.0
-# Pre-built wheels instead of building from source
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.2.0/en_core_web_sm-3.2.0.tar.gz 
+spacy>=3.2.0,<3.3.0
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.2.0/en_core_web_sm-3.2.0.tar.gz 

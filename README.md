@@ -80,15 +80,39 @@ http://localhost:5000
 4. Configure your web service with these settings:
    - Name: resume-analyzer (or your preferred name)
    - Environment: Python 3
-   - Build Command: `./build.sh` 
+   - Region: Choose the closest to your users
+   - Branch: main (or your preferred branch)
+   - Build Command: `./build.sh`
    - Start Command: `gunicorn app:app`
-   - Select the appropriate instance type (even Free tier works)
-   - Add environment variables if needed
-   
-5. Click "Create Web Service"
-6. Once deployed, your app will be available at https://your-app-name.onrender.com
+   - Instance Type: Free (or your preferred plan)
 
-**Note:** The first deployment may take longer as it needs to install all dependencies and build the required packages.
+5. Advanced Settings (optional but recommended):
+   - Add the following environment variables:
+     - `PYTHON_VERSION`: 3.10.12
+     - `PYTHONUNBUFFERED`: true
+
+6. Click "Create Web Service"
+
+The deployment will automatically:
+- Install required system packages
+- Set up Python environment
+- Install Python dependencies
+- Download required ML models
+- Start the application
+
+Your app will be available at `https://your-app-name.onrender.com` once deployment is complete.
+
+**Note:** The first deployment may take 5-10 minutes as it needs to install all dependencies and download the required models.
+
+**Troubleshooting:**
+- If you see build errors, check the build logs in the Render dashboard
+- Make sure all files are properly committed to your repository
+- Verify that your repository contains all required files:
+  - app.py
+  - requirements.txt
+  - build.sh
+  - render.yaml
+  - .render-buildpacks.json
 
 ### Deploying to Heroku
 

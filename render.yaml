@@ -8,4 +8,12 @@ services:
       - key: PYTHON_VERSION
         value: 3.10.12
       - key: PYTHONUNBUFFERED
-        value: true 
+        value: "true"
+    buildFilter:
+      paths:
+      - backend/**
+      - frontend/**
+      - app.py
+      - requirements.txt
+    autoDeploy: true
+    plan: free 
