@@ -31,25 +31,23 @@ A sophisticated resume analysis tool that leverages AI to provide detailed insig
 ## Tech Stack
 
 ### Frontend
-- React.js with Material-UI
+- HTML, CSS, JavaScript with Bootstrap
 - Chart.js for data visualization
 - Responsive design with CSS animations
-- PDF preview and file upload handling
+- File upload handling
 
 ### Backend
 - Python Flask REST API
-- Machine Learning models for skill extraction
 - Natural Language Processing for text analysis
 - Industry and role matching algorithms
 
 ## Getting Started
 
 ### Prerequisites
-- Node.js (v14+)
 - Python (v3.8+)
 - pip package manager
 
-### Installation
+### Installation & Running Locally
 
 1. Clone the repository:
 ```bash
@@ -57,27 +55,53 @@ git clone https://github.com/aathifpm/ResumeAnalyzer.git
 cd ResumeAnalyzer
 ```
 
-2. Install backend dependencies:
+2. Install dependencies:
 ```bash
-cd backend
 pip install -r requirements.txt
 ```
 
-3. Start the Flask server:
+3. Start the application:
 ```bash
 python app.py
 ```
 
-4. Install frontend dependencies:
-```bash
-cd ../frontend
-npm install
+4. Open your browser and go to:
+```
+http://localhost:5000
 ```
 
-5. Start the React development server:
+## Deployment
+
+### Deploying to Heroku
+
+1. Create a Heroku account and install the Heroku CLI
+2. Login to Heroku CLI:
 ```bash
-npm start
+heroku login
 ```
+
+3. Create a new Heroku app:
+```bash
+heroku create your-app-name
+```
+
+4. Push to Heroku:
+```bash
+git push heroku main
+```
+
+5. Open the deployed app:
+```bash
+heroku open
+```
+
+### Deploying to Other Platforms
+
+The application can be deployed to any platform that supports Python applications. Make sure to:
+
+1. Set the appropriate environment variables if needed
+2. Install the required dependencies from requirements.txt
+3. Run the application using gunicorn (for production) as specified in the Procfile
 
 ## Usage
 
@@ -102,8 +126,6 @@ Analyzes a resume and returns detailed insights.
   - resume: File (PDF/DOCX)
   - job_role: String (optional)
 
-
-
 ## Contributing
 
 1. Fork the repository
@@ -118,4 +140,3 @@ Analyzes a resume and returns detailed insights.
 - NLP frameworks and models
 - Industry standard job requirements data
 - Open source UI component libraries
-```

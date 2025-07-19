@@ -13,20 +13,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData(form);
 
         try {
-            const response = await fetch('http://localhost:5000/analyze', {
+            const response = await fetch('/analyze', {
                 method: 'POST',
                 body: formData
             });
 
-            const data = await response.json();
-            
             if (!response.ok) {
-                throw new Error(data.error || 'Server response was not ok');
+                const errorData = await response.json();
+                throw new Error(errorData.error || 'Server returned an error');
             }
 
+            const data = await response.json();
             displayResults(data);
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Error details:', error);
             alert(`Error analyzing resume: ${error.message}`);
         } finally {
             loadingDiv.classList.add('d-none');
